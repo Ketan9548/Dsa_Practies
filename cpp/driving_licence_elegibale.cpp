@@ -11,7 +11,14 @@ int main()
     }
     else if (age >= 18 && age <= 21)
     {
-        cout << "You are eligible for Learning licence" << endl;
+        if (age < 20)
+        {
+            cout << "You are eligible for learning licence but after take Driving Test" << endl;
+        }
+        else
+        {
+            cout << "You are eligible for Learning licence" << endl;
+        }
     }
     else
     {
