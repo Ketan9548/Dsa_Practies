@@ -7,13 +7,19 @@ int main()
     // {
     //     cout << i << " " << name << endl;
     // }
+
+    // int i = 1;
+    // while (i<=100)
+    // {
+    //     cout<<name<<" ";
+    //     i++;
+    // }
     int i = 1;
-    while (i<=100)
+    do
     {
-        cout<<name<<" ";
+        cout << name << endl;
         i++;
-    }
-    
+    } while (i < 1);
 
     return 0;
 }
