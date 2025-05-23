@@ -6,7 +6,6 @@ using namespace std;
 int main()
 {
     int number = 36;
-
     // for(int i = 1; i<=number; i++){
     //     if(number%i==0){
     //         cout<<i<<" ";
@@ -17,7 +16,6 @@ int main()
     //         cout<<i<<" ";
     //     }
     // }
-
     vector<int> ans;
     for (int i = 1; i <= sqrt(number); i++)
     {
@@ -30,10 +28,9 @@ int main()
             }
         }
     }
-
-    for(auto i: ans){
-        cout<<i<<" ";
+    for (auto i : ans)
+    {
+        cout << i << " ";
     }
-
     return 0;
 }
