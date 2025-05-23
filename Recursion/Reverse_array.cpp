@@ -26,32 +26,35 @@
 //     return 0;
 // }
 
-
-#include<iostream>
-#include<vector>
+#include <iostream>
+#include <vector>
 using namespace std;
-void swap(int a, int b){
-    a = a+b;
-    b = a-b;
-    b = a-b;
+void swap(int &a, int &b)
+{
+    // a = a + b;
+    // b = a - b;
+    // a = a - b;
+    int temp = a;
+    a = b;
+    b = temp;
 }
-void reversearra(vector<int> &v, int i){
-    int n = v.size()-1;
-    if(i>=n/2){
+void reversearra(int i, vector<int> &v, int n)
+{
+    if (i >= n / 2)
+    {
         return;
     }
-
-    swap(v[i],v[n-i-1]);
-    reversearra(v, i+1);
-    
+    swap(v[i], v[n - i - 1]);
+    reversearra(i + 1, v, n);
 }
 int main()
 {
-    vector<int> v = {1,2,3,4,5}; 
-    int i = 0;
-    reversearra(v,i);      
-    for(auto p: v){
-        cout<<p<<" ";
+    vector<int> v = {1, 2, 3, 4, 5};
+    int n = v.size();
+    reversearra(0, v, n);
+    for (auto p : v)
+    {
+        cout << p << " ";
     }
     return 0;
 }

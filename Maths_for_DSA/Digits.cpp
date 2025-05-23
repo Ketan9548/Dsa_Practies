@@ -5,7 +5,7 @@ int main()
 {
     int n = 123456732;
     int counter = 0;
-    int ans = log10(n)+1;
+    int ans = log10(n) + 1;
     // while (n != 0)
     // {
     //     int val = n % 10;
